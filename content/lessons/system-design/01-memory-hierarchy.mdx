@@ -1,0 +1,58 @@
+---
+title: "Memory Hierarchy"
+description: "Understanding the layers and types of memory in a computer system"
+date: "2026-04-23T11:57:13Z"
+---
+
+# Memory Hierarchy
+
+Memory hierarchy is a structure that uses multiple levels of memory with different speeds, costs, and sizes to efficiently store and retrieve data. It’s crucial in computer architecture as it impacts the performance and efficiency of a computing system. This lesson covers the different layers of memory hierarchy, their characteristics, and their roles in system design.
+
+## Levels of Memory Hierarchy
+
+1. **Registers**  
+   - **Location**: CPU  
+   - **Speed**: Fastest  
+   - **Size**: Very small (typically a few kilobytes)  
+   - **Function**: Temporarily hold data and instructions that the CPU is currently processing.
+
+2. **Cache Memory**  
+   - **Location**: On or near CPU  
+   - **Speed**: Fast (but slower than registers)  
+   - **Size**: Small (usually between 32KB and 12MB)  
+   - **Function**: Stores frequently accessed data and instructions to reduce the average time to access data from the main memory.
+
+3. **Main Memory (RAM)**  
+   - **Location**: Motherboard  
+   - **Speed**: Slower than cache but faster than disk storage  
+   - **Size**: Generally between 4GB to 64GB  
+   - **Function**: Holds data and instructions that are actively being used or processed.
+
+4. **Secondary Storage**  
+   - **Location**: Hard drives, SSDs, etc.  
+   - **Speed**: Slower than RAM  
+   - **Size**: Much larger (from hundreds of GB to several TB)  
+   - **Function**: Long-term storage of data and applications not in use.
+
+5. **Tertiary Storage**  
+   - **Location**: Off-line storage (e.g., magnetic tapes, optical disks)  
+   - **Speed**: Slowest  
+   - **Size**: Very large  
+   - **Function**: Backup and archival storage.
+
+## Characteristics of Memory Types
+- **Speed**: Access time decreases from registers to tertiary storage.
+- **Cost**: Cost per byte increases from registers to tertiary storage.
+- **Volatility**: Registers, cache, and RAM are volatile, meaning they lose data when power is lost, whereas secondary and tertiary storage are non-volatile.
+
+## Example
+Consider a scenario in a web application:
+1. **Cache** is used to store the results of frequently made queries, like user profiles.
+2. **Main Memory** holds the active session data for users currently logged in.
+3. **Secondary Storage** keeps the database files and large media files that are not actively being accessed.
+4. When data is requested, it first checks the cache; if it's not found, it queries the main memory, then the secondary storage, creating a tiered access pattern that optimizes response times.
+
+## Conclusion
+Understanding the memory hierarchy is essential for system design as it directly impacts performance, cost, and efficiency. By optimizing the use of different memory types, designers can create systems that perform better and manage resources more effectively.
+
+---
